@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "./variables.css";
+@import "./breakpoint.css";
+@import "./theme.css";
+@import "./utilities.css";
+@import "./animations.css";
+
+@layer base {
+  @import "./base.css";
+}
+
+@layer components {
+  @import "./components.css";
+}
+@layer utilities {
+  @import "./utilities.css";
+}
