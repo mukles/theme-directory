@@ -4,11 +4,12 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const headingVariants = cva("mb-4 font-bold tracking-tight", {
+const headingVariants = cva("font-bold tracking-tight", {
   variants: {
     variant: {
       default: "",
       muted: "text-muted-foreground",
+      gradient: "text-gradient",
     },
   },
   defaultVariants: {
@@ -17,7 +18,7 @@ const headingVariants = cva("mb-4 font-bold tracking-tight", {
 });
 
 const levelStyles: Record<number, string> = {
-  1: "text-4xl",
+  1: "text-7xl leading-[1.2] font-secondary",
   2: "text-3xl",
   3: "text-2xl",
   4: "text-xl",

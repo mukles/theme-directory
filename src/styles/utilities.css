@@ -1,0 +1,23 @@
+.gradient-primary {
+  background-image: var(--background-gradient), var(--border-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+.text-gradient {
+  background-image: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(var(--background), var(--background)),
+    var(--border-gradient);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}

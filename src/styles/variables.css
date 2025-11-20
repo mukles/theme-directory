@@ -1,21 +1,41 @@
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #000;
+  --background-gradient: linear-gradient(
+    180deg,
+    rgba(76, 210, 255, 0.8) 0%,
+    rgba(4, 20, 242, 0.8) 100%
+  );
+  --text-gradient:
+    linear-gradient(0deg, #ceddff, #ceddff),
+    linear-gradient(
+      92.04deg,
+      #1a1233 -5.35%,
+      rgba(245, 245, 245, 0) 68.55%,
+      #1a1233 102.05%
+    );
+
+  --foreground: #f5f5f5;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #0414f2;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: #cbd6ff;
+  --secondary-foreground: #b5c5ff;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
+  --border: #fff;
+  --border-gradient: linear-gradient(
+    270deg,
+    #ffffff -11.43%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --divider: #262626;
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -43,13 +63,14 @@
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: #b5c5ff;
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: #fff;
+  --divider: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -65,4 +86,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --border-gradient: linear-gradient(
+    270deg,
+    #ffffff -11.43%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
