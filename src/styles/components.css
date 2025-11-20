@@ -1,3 +1,21 @@
 .container {
   @apply mx-auto max-w-[1320px] px-4;
 }
+
+.noice-background::before {
+  @apply pointer-events-none absolute top-0 left-0 z-10 h-full w-full bg-[url('/images/noise.gif')] opacity-[0.05] content-[''];
+}
+
+.background-wave {
+  @apply relative h-60 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)];
+
+  &::before {
+    content: "";
+    @apply absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,#369eff,transparent_90%)] opacity-100;
+  }
+
+  &::after {
+    content: "";
+    @apply bg-background absolute top-[40%] -left-1/2 aspect-[1/0.8] w-[200%] rounded-[50%] border-2 border-b border-[#7876c566];
+  }
+}
