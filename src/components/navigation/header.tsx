@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export function Header() {
   return (
-    <header className="border-b-divider border-b">
+    <header className="border-b-divider blur-in from-background fixed top-0 right-0 left-0 z-50 border-b">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           <Logo />

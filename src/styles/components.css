@@ -11,7 +11,7 @@
 
   &::before {
     content: "";
-    @apply absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,#369eff,transparent_90%)] opacity-100;
+    @apply absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,var(--primary),transparent_90%),radial-gradient(circle_at_bottom_center,#5F8EFF,transparent_60%)] opacity-100;
   }
 
   &::after {
