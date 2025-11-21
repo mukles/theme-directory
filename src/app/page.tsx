@@ -5,7 +5,10 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <section className="noice-background relative">
+    <section className="relative">
+      <div className="absolute top-0 right-0 bottom-0 left-0 bg-[linear-gradient(to_right,#AEDDFF_1px,transparent_1px),linear-gradient(to_bottom,#AEDDFF_1px,transparent_1px)] mask-[radial-gradient(ellipse_15%_15%_at_70%_0,#000_-200%,transparent_111%)] bg-size-[35px_34px]" />
+      <div className="absolute -top-[48%] right-[12%] h-[400px] w-[400px] [transform:matrix(0.98,0.2,0.2,-0.98,0,0)] bg-[radial-gradient(50.98%_50.98%_at_67.71%_62.12%,_#FFFFFF_0%,_#3C99B6_50%,_#2308B3_100%)] mix-blend-plus-lighter blur-[157.462px]" />
+
       <div className="container">
         <div className="relative">
           <Separator
