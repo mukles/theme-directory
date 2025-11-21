@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <DecorativeBackground />
 
         <div className="absolute inset-0 top-[5rem] z-20 mx-auto flex h-[calc(100vh_-_5rem)] max-w-[1320px] items-center justify-between px-4">

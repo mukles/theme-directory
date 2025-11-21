@@ -11,11 +11,15 @@
 
   &::before {
     content: "";
-    @apply absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,var(--primary),transparent_90%),radial-gradient(circle_at_bottom_center,#5F8EFF,transparent_60%)] opacity-100;
+    @apply absolute inset-0 opacity-100;
+
+    /* Use normal CSS because @apply can't wrap multiple bg values cleanly */
+    background: radial-gradient(circle at bottom center, color-mix(in srgb, var(--primary) 80%, #5f8eff 20%) 0%, transparent 90%), radial-gradient(circle at bottom center, color-mix(in srgb, #5f8eff 70%, var(--primary) 30%) 0%, transparent 70%);
   }
 
   &::after {
     content: "";
-    @apply bg-background absolute top-[40%] -left-1/2 aspect-[1/0.8] w-[200%] rounded-[50%] border-2 border-b border-[#7876c566];
+    @apply bg-background absolute top-[25%] -left-1/2 aspect-[1/0.8] w-[200%] rounded-[50%] border-2 border-b border-[#7876c566];
+    box-shadow: 6px 0px 20px 15px #5f8eff;
   }
 }
