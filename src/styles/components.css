@@ -2,18 +2,13 @@
   @apply mx-auto max-w-[1320px] px-4;
 }
 
-.noice-background::before {
-  @apply pointer-events-none absolute top-0 left-0 z-10 h-full w-full bg-[url('/images/noise.gif')] opacity-[0.05] content-[''];
-}
-
+/* background-wave */
 .background-wave {
   @apply relative h-60 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)];
 
   &::before {
     content: "";
     @apply absolute inset-0 opacity-100;
-
-    /* Use normal CSS because @apply can't wrap multiple bg values cleanly */
     background: radial-gradient(circle at bottom center, color-mix(in srgb, var(--primary) 80%, #5f8eff 20%) 0%, transparent 90%), radial-gradient(circle at bottom center, color-mix(in srgb, #5f8eff 70%, var(--primary) 30%) 0%, transparent 70%);
   }
 
@@ -22,4 +17,21 @@
     @apply bg-background absolute top-[25%] -left-1/2 aspect-[1/0.8] w-[200%] rounded-[50%] border-2 border-b border-[#7876c566];
     box-shadow: 6px 0px 20px 15px #5f8eff;
   }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+}
+
+.animated-gradient-text {
+  --spread: 68px;
+  --base-color: var(--color-primary);
+  --base-gradient-color: var(--color-white);
+  --bg: linear-gradient(90deg, #0000 calc(50% - 68px), var(--base-gradient-color), #0000 calc(50% + 68px));
+  background-image: var(--bg), linear-gradient(var(--base-color), var(--base-color));
+  background-size:
+    250% 100%,
+    auto;
+  background-repeat: no-repeat;
+  animation: move-bg-position 4s ease-in-out infinite;
 }

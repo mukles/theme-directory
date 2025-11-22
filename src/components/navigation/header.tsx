@@ -1,7 +1,8 @@
 import { siteMenu } from "@/config/menu";
 import Link from "next/link";
 import Logo from "../logo";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
+import { Button as MovingBorder } from "../ui/moving-border";
 
 export function Header() {
   return (
@@ -24,9 +25,16 @@ export function Header() {
               <Link href="/login">Sign in</Link>
             </Button>
 
-            <Button className="gradient-primary" size={"lg"}>
+            <MovingBorder
+              borderRadius="12px"
+              borderWidth={0}
+              className={buttonVariants({
+                size: "lg",
+                className: "gradient-primary",
+              })}
+            >
               <Link href="/login">Submit now</Link>
-            </Button>
+            </MovingBorder>
           </div>
         </div>
       </div>

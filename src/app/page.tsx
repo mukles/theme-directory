@@ -1,9 +1,12 @@
 import DecorativeBackground from "@/components/decorative-background";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
+import { Button } from "@/components/ui/moving-border";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholder-vanished-input";
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,7 +24,7 @@ export default function Home() {
             <div className="mx-auto w-full max-w-5xl pt-63 text-center">
               <div className="inline-flex space-x-2 rounded-full border px-2.5 py-1.5">
                 <Badge>New</Badge>
-                <h1 className="relative inline-block bg-[length:250%_100%,auto] bg-clip-text [background-repeat:no-repeat,padding-box] text-sm font-normal text-transparent [--base-color:var(--color-brand)] [--base-gradient-color:var(--color-white)] [--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))] dark:[--base-color:var(--color-brand)] dark:[--base-gradient-color:var(--color-white)] dark:[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]">2250+ Templates & Tools Directory</h1>
+                <h1 className="animate-move-bg gradient-text animated-gradient-text relative inline-block text-sm font-normal">For fast moving engineering teams.</h1>
               </div>
               <Heading variant={"gradient"} level={1} className="mt-4.5">
                 Find Everything You Need in One Place
@@ -38,7 +41,25 @@ export default function Home() {
         <div className="background-wave z-0">
           <div className="neon-line"></div>
         </div>
+        <HoverBorderGradientDemo />
       </section>
     </>
+  );
+}
+
+export function HoverBorderGradientDemo() {
+  return (
+    <div>
+      <Button
+        borderRadius="1.75rem"
+        containerClassName={""}
+        className={buttonVariants({
+          variant: "outline",
+          size: "lg",
+        })}
+      >
+        <Link href="/login">Submit now</Link>
+      </Button>
+    </div>
   );
 }

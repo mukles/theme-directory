@@ -30,3 +30,20 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
+
+@keyframes move-bg-position {
+  100% {
+    background-position: 0% center;
+  }
+  70% {
+    background-position: 25% center;
+  }
+
+  30% {
+    background-position: 75% center;
+  }
+
+  0% {
+    background-position: 100% center;
+  }
+}

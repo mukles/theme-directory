@@ -41,4 +41,5 @@
 
   /* Animations */
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-move-bg: move-bg-position 4s ease-in-out infinite;
 }

@@ -1,5 +1,5 @@
 .gradient-primary {
-  background-image: var(--background-gradient), var(--border-gradient);
+  background-image: var(--background-gradient);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   border: 1px solid transparent;
@@ -18,4 +18,8 @@
   background-image: linear-gradient(var(--background), var(--background)), var(--border-gradient);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
+}
+
+.moving-border {
+  background: radial-gradient(circle, #fff 20%, transparent 60%, rgba(255, 98, 138, 0) 100%);
 }
