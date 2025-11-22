@@ -1,10 +1,9 @@
 import DecorativeBackground from "@/components/decorative-background";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
-import { Input } from "@/components/ui/input";
+import { PlaceholdersAndVanishInput } from "@/components/ui/placeholder-vanished-input";
 import { Separator } from "@/components/ui/separator";
-import { Search } from "lucide-react";
+import { config } from "@/config";
 
 export default function Home() {
   return (
@@ -22,7 +21,7 @@ export default function Home() {
             <div className="mx-auto w-full max-w-5xl pt-63 text-center">
               <div className="inline-flex space-x-2 rounded-full border px-2.5 py-1.5">
                 <Badge>New</Badge>
-                <h1 className="text-sm">2250+ Templates & Tools Directory</h1>
+                <h1 className="relative inline-block bg-[length:250%_100%,auto] bg-clip-text [background-repeat:no-repeat,padding-box] text-sm font-normal text-transparent [--base-color:var(--color-brand)] [--base-gradient-color:var(--color-white)] [--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))] dark:[--base-color:var(--color-brand)] dark:[--base-gradient-color:var(--color-white)] dark:[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]">2250+ Templates & Tools Directory</h1>
               </div>
               <Heading variant={"gradient"} level={1} className="mt-4.5">
                 Find Everything You Need in One Place
@@ -32,13 +31,7 @@ export default function Home() {
                 filtered by real-world features and user reviews.
               </p>
 
-              <div className="relative mt-6 inline-block w-full max-w-[480px]">
-                <Input className="placeholder:text-foreground mx-auto h-auto max-w-lg rounded-full py-4.5 font-medium placeholder:text-base placeholder:font-medium" placeholder="Quick search" />
-
-                <Button className="text-foreground/50 absolute top-1/2 right-2 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white text-base">
-                  <Search className="text-muted-foreground size-5" />
-                </Button>
-              </div>
+              <PlaceholdersAndVanishInput placeholders={config.settings.search.placeholder} />
             </div>
           </div>
         </div>
