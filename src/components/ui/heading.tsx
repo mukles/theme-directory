@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const headingVariants = cva("font-bold tracking-tight", {
+const headingVariants = cva("font-bold tracking-tight leading-[1.2] font-secondary", {
   variants: {
     variant: {
       default: "",
@@ -18,8 +18,8 @@ const headingVariants = cva("font-bold tracking-tight", {
 });
 
 const levelStyles: Record<number, string> = {
-  1: "text-7xl leading-[1.2] font-secondary",
-  2: "text-3xl",
+  1: "text-7xl",
+  2: "text-6xl",
   3: "text-2xl",
   4: "text-xl",
   5: "text-lg",
@@ -32,26 +32,10 @@ type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> &
     asChild?: boolean;
   };
 
-function Heading({
-  level = 1,
-  className,
-  variant,
-  asChild = false,
-  ...props
-}: HeadingProps) {
+function Heading({ level = 1, className, variant, asChild = false, ...props }: HeadingProps) {
   const Comp: any = asChild ? Slot : (`h${level}` as any);
 
-  return (
-    <Comp
-      data-slot="heading"
-      className={cn(
-        headingVariants({ variant }),
-        levelStyles[level],
-        className,
-      )}
-      {...props}
-    />
-  );
+  return <Comp data-slot="heading" className={cn(headingVariants({ variant }), levelStyles[level], className)} {...props} />;
 }
 
 export { Heading, headingVariants };

@@ -1,12 +1,10 @@
+import { CallToAction } from "@/components/call-to-action";
 import DecorativeBackground from "@/components/decorative-background";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
-import { Button } from "@/components/ui/moving-border";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholder-vanished-input";
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -41,25 +39,13 @@ export default function Home() {
         <div className="background-wave z-0">
           <div className="neon-line"></div>
         </div>
-        <HoverBorderGradientDemo />
+      </section>
+
+      <section className="py-24">
+        <div className="container">
+          <CallToAction />
+        </div>
       </section>
     </>
-  );
-}
-
-export function HoverBorderGradientDemo() {
-  return (
-    <div>
-      <Button
-        borderRadius="1.75rem"
-        containerClassName={""}
-        className={buttonVariants({
-          variant: "outline",
-          size: "lg",
-        })}
-      >
-        <Link href="/login">Submit now</Link>
-      </Button>
-    </div>
   );
 }
