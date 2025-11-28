@@ -1,4 +1,5 @@
 import { Header } from "@/components/navigation/header";
+import { TwSizeIndicator } from "@/components/tw-size-indicator";
 import "@/styles/main.css";
 import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body className={`${geistSans.variable} ${inter.variable} relative antialiased`}>
+        <TwSizeIndicator />
         <Header />
         {children}
       </body>

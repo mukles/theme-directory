@@ -2,23 +2,6 @@
   @apply mx-auto max-w-[1320px] px-4;
 }
 
-/* background-wave */
-.background-wave {
-  @apply relative h-60 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)];
-
-  &::before {
-    content: "";
-    @apply absolute inset-0 opacity-100;
-    background: radial-gradient(circle at bottom center, color-mix(in srgb, var(--primary) 80%, #5f8eff 20%) 0%, transparent 90%), radial-gradient(circle at bottom center, color-mix(in srgb, #5f8eff 70%, var(--primary) 30%) 0%, transparent 70%);
-  }
-
-  &::after {
-    content: "";
-    @apply bg-background absolute top-[25%] -left-1/2 aspect-[1/0.8] w-[200%] rounded-[50%] border-2 border-b border-[#7876c566];
-    box-shadow: 6px 0px 20px 15px #5f8eff;
-  }
-}
-
 .gradient-text {
   @apply bg-clip-text text-transparent;
 }
@@ -34,4 +17,34 @@
     auto;
   background-repeat: no-repeat;
   animation: move-bg-position 4s ease-in-out infinite;
+}
+
+.background-wave {
+  @apply relative h-60 w-full overflow-hidden;
+  mask-image: radial-gradient(50% 50%, white, transparent);
+  -webkit-mask-image: radial-gradient(50% 50%, white, transparent);
+}
+
+.wave-glow {
+  @apply animate-pulse-glow absolute inset-0 opacity-40;
+  background: radial-gradient(circle at bottom center, var(--neon-primary) 0%, transparent 70%), radial-gradient(circle at bottom center, var(--neon-secondary) 0%, transparent 50%);
+}
+
+.wave-surface {
+  @apply animate-neon-pulse bg-background absolute top-[25%] -left-1/2 aspect-[1/0.8] w-[200%] overflow-hidden rounded-[50%] border-t-2 border-[var(--neon-secondary)];
+  box-shadow:
+    0 -4px 20px 5px var(--neon-glow),
+    0 -2px 40px 10px rgba(95, 142, 255, 0.2),
+    inset 0 2px 10px rgba(95, 142, 255, 0.1);
+}
+
+.neon-sweep {
+  @apply animate-sweep-light absolute top-[-2px] left-[-10%] h-1 w-[20%] rounded-[50%];
+  background: linear-gradient(90deg, transparent, var(--neon-primary), white, var(--neon-primary), transparent);
+  filter: blur(2px);
+}
+
+.wave-reflection {
+  @apply animate-reflection-pulse pointer-events-none absolute top-[30%] -left-[50%] aspect-[1/0.7] w-[200%] rounded-[50%] bg-transparent;
+  box-shadow: 0 -60px 80px -20px rgba(95, 142, 255, 0.15);
 }

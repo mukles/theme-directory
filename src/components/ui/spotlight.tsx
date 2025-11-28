@@ -5,7 +5,7 @@ type SpotlightProps = {
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={1920} height={873} fill="none" className="absolute top-0 left-0 -translate-x-[20%]">
+    <svg xmlns="http://www.w3.org/2000/svg" width={1920} height={873} fill="none" className={className}>
       <g
         filter="url(#a)"
         opacity={0.4}

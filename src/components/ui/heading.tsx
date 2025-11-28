@@ -18,12 +18,12 @@ const headingVariants = cva("font-bold tracking-tight leading-[1.2] font-seconda
 });
 
 const levelStyles: Record<number, string> = {
-  1: "text-7xl",
-  2: "text-6xl",
-  3: "text-2xl",
-  4: "text-xl",
-  5: "text-lg",
-  6: "text-base",
+  1: "text-4xl md:text-7xl",
+  2: "text-3xl md:text-6xl",
+  3: "text-xl md:text-2xl",
+  4: "text-lg md:text-xl",
+  5: "text-base md:text-lg",
+  6: "text-sm md:text-base",
 };
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> &

@@ -42,4 +42,9 @@
   /* Animations */
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-move-bg: move-bg-position 4s ease-in-out infinite;
+
+  --animate-neon-pulse: neon-pulse 3s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-sweep-light: sweep-light 6s ease-in-out infinite;
+  --animate-reflection-pulse: reflection-pulse 4s ease-in-out infinite;
 }

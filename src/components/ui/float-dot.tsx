@@ -7,7 +7,7 @@ const floatDotVariants = cva("bg-accent absolute", {
   variants: {
     shape: {
       circle: "rounded-full",
-      square: "rounded-sm",
+      square: "rounded-none hover:rounded-full transition-all duration-300 hover:gradient-primary hover:scale-150 hover:shadow-xl shadow-primary",
     },
     position: {
       "top-left": "top-0 left-0",
@@ -28,24 +28,10 @@ const floatDotVariants = cva("bg-accent absolute", {
   },
 });
 
-export interface FloatDotProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof floatDotVariants> {}
+export interface FloatDotProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof floatDotVariants> {}
 
-export function FloatDot({
-  className,
-  shape,
-  position,
-  size,
-  ...props
-}: FloatDotProps) {
-  return (
-    <div
-      aria-hidden
-      className={cn(floatDotVariants({ shape, position, size, className }))}
-      {...props}
-    />
-  );
+export function FloatDot({ className, shape, position, size, ...props }: FloatDotProps) {
+  return <div aria-hidden className={cn(floatDotVariants({ shape, position, size, className }))} {...props} />;
 }
 
 export { floatDotVariants };

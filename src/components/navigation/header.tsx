@@ -6,7 +6,7 @@ import { Button as MovingBorder } from "../ui/moving-border";
 
 export function Header() {
   return (
-    <header className="border-b-divider blur-in from-background fixed top-0 right-0 left-0 z-50 border-b">
+    <header className="blur-in from-background fixed top-0 right-0 left-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           <Logo />
@@ -25,16 +25,19 @@ export function Header() {
               <Link href="/login">Sign in</Link>
             </Button>
 
-            <MovingBorder
-              borderRadius="12px"
-              borderWidth={0}
-              className={buttonVariants({
-                size: "lg",
-                className: "gradient-primary",
-              })}
-            >
-              <Link href="/login">Submit now</Link>
-            </MovingBorder>
+            <Link href="/login" passHref legacyBehavior>
+              <MovingBorder
+                as="a"
+                borderRadius="12px"
+                borderWidth={4}
+                className={buttonVariants({
+                  size: "lg",
+                  className: "gradient-primary",
+                })}
+              >
+                Submit now
+              </MovingBorder>
+            </Link>
           </div>
         </div>
       </div>
