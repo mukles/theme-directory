@@ -5,6 +5,7 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholder-vanished
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
 
+import { ThemeBanner } from "@/components/themes";
 import { badgeVariants } from "@/components/ui/badge";
 import { FloatDot } from "@/components/ui/float-dot";
 import { Button as MovingBorder } from "@/components/ui/moving-border";
@@ -12,21 +13,17 @@ import { Button as MovingBorder } from "@/components/ui/moving-border";
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <DecorativeBackground className="absolute top-0 right-0" />
+      <DecorativeBackground className="absolute top-0 right-0" />
+      <div className="absolute inset-0 top-[5.2rem] z-20 flex h-[calc(100vh_-_5rem)]">
+        <div className="relative container flex items-center justify-between">
+          <Separator className="absolute top-0 left-0 h-full" orientation="vertical" />
+          <Separator className="absolute top-0 right-0 h-full" orientation="vertical" />
 
-        <div className="absolute inset-0 top-[5.2rem] z-20 flex h-[calc(100vh_-_5rem)]">
-          <Separator className="absolute top-0 left-0 z-30" />
-
-          <div className="relative container flex items-center justify-between">
-            <Separator className="absolute top-0 left-0 h-full" orientation="vertical" />
-            <Separator className="absolute top-0 right-0 h-full" orientation="vertical" />
-
-            <FloatDot shape={"square"} position={"top-left"} size={"sm"} className="z-50 -translate-1/2" />
-            <FloatDot size={"sm"} shape={"square"} position={"top-right"} className="z-50 translate-x-1/2 -translate-y-1/2" />
-          </div>
+          <FloatDot shape={"square"} position={"top-left"} size={"sm"} className="z-50 -translate-1/2" />
+          <FloatDot size={"sm"} shape={"square"} position={"top-right"} className="z-50 translate-x-1/2 -translate-y-1/2" />
         </div>
-
+      </div>
+      <section className="relative overflow-hidden">
         <div className="container">
           <div className="relative z-20">
             <div className="mx-auto w-full max-w-5xl pt-63 text-center">
@@ -51,6 +48,8 @@ export default function Home() {
 
         <AnimatedBackgroundWave />
       </section>
+
+      <ThemeBanner />
     </>
   );
 }

@@ -5,10 +5,12 @@ export type MenuItem = {
 };
 
 export const siteMenu: MenuItem[] = [
-  { title: "Pricing", href: "/pricing" },
-  { title: "About", href: "/about" },
-  { title: "Careers", href: "/careers" },
+  { title: "Themes", href: "/themes" },
+  { title: "Components", href: "/components" },
   { title: "Blog", href: "/blog" },
+  { title: "Tools", href: "/tools" },
+  { title: "Services", href: "/services" },
+  { title: "Contact Us", href: "/contact" },
 ];
 
 export default siteMenu;

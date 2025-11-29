@@ -6,7 +6,7 @@ import { Button as MovingBorder } from "../ui/moving-border";
 
 export function Header() {
   return (
-    <header className="blur-in from-background fixed top-0 right-0 left-0 z-50">
+    <header className="blur-in border-b-divider from-background relative z-10 border-b">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           <Logo />
