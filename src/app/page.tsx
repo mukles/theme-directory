@@ -5,7 +5,6 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholder-vanished
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
 
-import { ThemeBanner } from "@/components/themes";
 import { badgeVariants } from "@/components/ui/badge";
 import { FloatDot } from "@/components/ui/float-dot";
 import { Button as MovingBorder } from "@/components/ui/moving-border";
@@ -48,8 +47,6 @@ export default function Home() {
 
         <AnimatedBackgroundWave />
       </section>
-
-      <ThemeBanner />
     </>
   );
 }
