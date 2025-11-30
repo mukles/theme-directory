@@ -102,7 +102,7 @@ export function ThemeFilter() {
   }
 
   return (
-    <Accordion type="multiple" className="space-y-2">
+    <Accordion type="multiple" className="space-y-2" defaultValue={[groups[0].key]}>
       {groups.map((group) => (
         <AccordionItem key={group.key} value={group.key} className="border-divider px-3.5">
           <AccordionTrigger className="cursor-pointer text-sm font-medium hover:no-underline">{group.label}</AccordionTrigger>
